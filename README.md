@@ -1,71 +1,76 @@
 # Decision Simulation Framework
 
-**Multi-path scenario modeling system for behavioral prediction and strategic decision optimization**
+**Multi-path scenario modeling for behavioral prediction and decision support**
 
-Part of the [CCCS Framework](https://github.com/aadi-architect/aadi-architect) research ecosystem.
+Part of the [CCCS framework](https://github.com/aadi-architect/aadi-architect) research ecosystem.
+
+> **What this repository is:** an architecture specification — component breakdowns, formulas,
+> and integration notes. There is no runnable implementation here yet. It is labeled this way
+> on purpose so nobody clones it expecting a library.
 
 ## Overview
 
-Multi-path scenario simulation for behavioral prediction and decision optimization. Implements chain reaction analysis, consequence mapping, and optimization algorithms for strategic decision support.
+**SIM Core** is the decision-modeling component of Project SIM. Given a decision point, it
+projects several candidate paths forward and scores each across three consequence spaces rather
+than one utility number.
 
-## Core Components
+**Simulation space:** `Emotional × Social × Practical`
 
-### SIM Core Engine
+## Components
+
+### SIM Core engine
+
 - Multi-path trajectory modeling
-- Emotional consequence simulation
-- Social impact prediction
-- Practical outcome forecasting
+- Consequence projection across all three spaces
+- Chain-reaction analysis — second- and third-order effects, not just the immediate outcome
 
-### Scenario Builder
+### Scenario builder
+
 - Decision tree generation
 - Consequence chain mapping
 - Temporal projection modeling
 
-### Optimization Layer
-- Path ranking algorithms
-- Risk-reward analysis
-- Strategic recommendation engine
+### Optimization layer
 
-## Technical Architecture
+- Path ranking
+- Risk/reward analysis
+- Recommendation surfacing with the tradeoff made explicit
 
-**Key Formula:** Simulate across `(Emotional × Social × Practical)` consequence spaces
-
-## Tech Stack
+## Intended stack
 
 - **Core:** Python, FastAPI
 - **Simulation:** NetworkX, SimPy
-- **ML:** PyTorch, TensorFlow
-- **Vector DB:** FAISS, ChromaDB
+- **ML:** PyTorch
+- **Vector store:** FAISS, ChromaDB
 
 ## Status
 
-🚧 **Active Research** — Core simulation engine operational, optimization layer in development
+**Specification.** The simulation model and its consequence spaces are documented; the
+optimization layer is still being designed. No implementation is public yet.
 
 ## Integration
 
-**SIM Core** is the decision-modeling component of Project SIM, working alongside:
-- RICA (Relational Identity & Continuity Architecture)
-- GOD (General Observer Dynamics)
+SIM Core is one of three Project SIM components:
 
-## Research Context
+- **RICA** — Relational Identity & Continuity Architecture (symbolic anchoring, pattern persistence)
+- **SIM Core** — this repository
+- **GOD** — General Observer Dynamics, `P(Persona | Context, Anchors, Belief)`
 
-Implements the **multi-path decision simulation** component of the CCCS framework:
-- Predicts emotional trajectory outcomes
-- Models social consequence chains
-- Enables identity-consistent decision support
+Related specifications:
 
-## Use Cases
+- [emotional-ai-architecture](https://github.com/aadi-architect/emotional-ai-architecture) — EFL, TEL, SRE
+- [cognitive-pattern-tools](https://github.com/aadi-architect/cognitive-pattern-tools) — SAG, OMP
 
-- AI counseling decision-support
-- Strategic planning assistance
-- Emotional trajectory forecasting
-- Adaptive learning path optimization
+## Intended applications
+
+Strategic planning assistance, adaptive learning path optimization, and decision-intelligence
+tooling where the tradeoffs across different consequence spaces need to stay visible.
 
 ## Contact
 
-Adarsh Kumar (Aadi)  
-📧 adarshkr26@gmail.com  
-🔗 [LinkedIn](https://linkedin.com/in/adarshkumar-ai-research)
+**Aadi Adarsh** (Adarsh Kumar) · [aadiadarsh.dev](https://aadiadarsh.dev)
+[work@aadiadarsh.dev](mailto:work@aadiadarsh.dev) ·
+[LinkedIn](https://www.linkedin.com/in/adarsh-k-970010399/)
 
 ---
 
