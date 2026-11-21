@@ -38,10 +38,9 @@ than one utility number.
 
 ## Intended stack
 
-- **Core:** Python, FastAPI
+- **Core:** Python
 - **Simulation:** NetworkX, SimPy
 - **ML:** PyTorch
-- **Vector store:** FAISS, ChromaDB
 
 ## Status
 
