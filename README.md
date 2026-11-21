@@ -45,16 +45,15 @@ than one utility number.
 
 ## Status
 
-**Specification.** The simulation model and its consequence spaces are documented; the
-optimization layer is still being designed. No implementation is public yet.
+**Specification [Designed].** The simulation model and its consequence spaces are documented (`Emotional × Social × Practical`); the optimization layer and runtime execution are **[Aspirational]**. Reference R-Score implementation is public in `emotional-ai-architecture` (14/14 tests passing); full SIM Core runtime is in progress.
 
 ## Integration
 
 SIM Core is one of three Project SIM components:
 
-- **RICA** — Relational Identity & Continuity Architecture (symbolic anchoring, pattern persistence)
-- **SIM Core** — this repository
-- **GOD** — General Observer Dynamics, `P(Persona | Context, Anchors, Belief)`
+- **RICA** — Relational Identity & Continuity Architecture (symbolic anchoring, pattern persistence) [Designed]
+- **SIM Core** — this repository [Designed]
+- **PersonaPosterior** — Bayesian observer module, `P(Persona | Context, Anchors, Belief)` [Designed]
 
 Related specifications:
 
